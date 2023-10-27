@@ -1,5 +1,174 @@
-template-repository (1.0-1) unstable; urgency=medium
+libnet-openid-consumer-perl (1.18-2) unstable; urgency=medium
 
-  * Initial release
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * debian/upstream/metadata: change GitHub/CPAN URL(s) to HTTPS.
+  * debian/upstream/metadata: use HTTPS for GitHub URLs.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Bump debhelper from deprecated 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends-Indep: Drop versioned constraint on
+      libnet-openid-common-perl.
+    + libnet-openid-consumer-perl: Drop versioned constraint on
+      libnet-openid-common-perl in Depends.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Thu, 30 Jun 2022 23:56:42 +0100
+
+libnet-openid-consumer-perl (1.18-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 14 Jun 2022 14:08:40 +0200
+
+libnet-openid-consumer-perl (1.18-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * Add debian/upstream/metadata.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * Import upstream versions 1.17, 1.18.
+  * debian/rules: drop override_dh_clean.
+    The editor backup files which we removed are gone.
+  * Bump versioned (build) dependency on libnet-openid-common-perl
+    to 1.19.
+  * Declare compliance with Debian Policy 3.9.7.
+  * Bump debhelper compatibility level to 9.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 13 Feb 2016 15:52:32 +0100
+
+libnet-openid-consumer-perl (1.16-1) unstable; urgency=medium
+
+  * Team upload
+  * Move under team maintenance
+  * debian/control: Changed: Homepage field changed to metacpan.org URL;
+    Maintainer set to Debian Perl Group <pkg-perl-
+    maintainers@lists.alioth.debian.org>; Dominic Hargreaves <dom@earth.li>
+    moved to Uploaders.
+  * debian/watch: use metacpan-based URL.
+  * Mark package as autopkgtestable
+  * Declare compliance with Debian Policy 3.9.6
+  * Use group's repository in Vcs-*
+  * Remove (build) dependency on libdigest-sha-perl, included in perl core
+    since 5.9.3
+  * Remove the version from the perl build dependency.
+    5.8.0 is available everywhere
+  * Include module name in long description
+  * Add build dependency on libcgi-pm-perl | perl (<< 5.19)
+    CGI.pm is no longer in perl core. (Closes: #789366)
+  * Imported Upstream version 1.16
+
+ -- Damyan Ivanov <dmn@debian.org>  Fri, 24 Jul 2015 13:33:47 +0000
+
+libnet-openid-consumer-perl (1.15-1) unstable; urgency=medium
+
+  * Confirm to copyright-format 1.0
+  * New upstream release
+  * Update Standards-Version (no changes)
+  * Work around editor backup files shipped upstream
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 09 Feb 2014 14:47:08 +0000
+
+libnet-openid-consumer-perl (1.13-1) unstable; urgency=low
+
+  * Update to debhelper compat level 8
+  * Update Standards-Version (no changes)
+  * New upstream release
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 18 Mar 2012 19:35:49 +0000
+
+libnet-openid-consumer-perl (1.12-1) unstable; urgency=low
+
+  * Add Vcs-* fields
+  * New upstream release
+  * Update dependencies for new release (closes: #636856)
+  * Update Standards-Version (no changes)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 12 Nov 2011 13:24:37 +0000
+
+libnet-openid-consumer-perl (1.03-2) unstable; urgency=low
+
+  * Add dependency on libcrypt-ssleay-perl (closes: #608033)
+  * Update Standards-Version (no changes)
+  * Switch to minimal dh7 rules file
+  * Update to debhelper compatibility level 7
+  * Update source format version to 3.0 (quilt)
+  * Fix POD formatting and spelling errors
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 05 Feb 2011 16:17:40 +0000
+
+libnet-openid-consumer-perl (1.03-1) unstable; urgency=low
+
+  * New upstream release (closes: #531748)
+  * Update Standards-Version (no changes)
+  * Bump debian/compat to 5
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 05 Jun 2009 17:24:40 +0100
+
+libnet-openid-consumer-perl (0.14-4) unstable; urgency=low
+
+  * Remove dependency and build-dependency on libmime-tools-perl; only
+    MIME::Base64 is actually used and that comes from the perl package,
+    not the libmime-tools-perl package
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 10 Aug 2008 18:04:13 +0100
+
+libnet-openid-consumer-perl (0.14-3) unstable; urgency=low
+
+  * Replace Depends on libmime-perl with libmime-tools-perl due to
+    package rename (fixes Lintian error)
+  * Update Standards-Version (no changes)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat,  9 Aug 2008 22:46:38 +0100
+
+libnet-openid-consumer-perl (0.14-2) unstable; urgency=low
+
+  * Fix debian/rules rmdir bug (closes: #467864)
+  * Standardize debian/watch format
+  * debian/control: add Homepage field
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat,  1 Mar 2008 18:08:08 +0000
+
+libnet-openid-consumer-perl (0.14-1) unstable; urgency=low
+
+  * New upstream release
+  * Update Standards-Version (no changes)
+  * Fix 'make distclean' invocation in debian/rules
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 30 Dec 2007 14:22:52 +0000
+
+libnet-openid-consumer-perl (0.13-1) unstable; urgency=low
+
+  * New upstream release
+  * Update Standards-Version (no changes)
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon,  4 Jun 2007 18:25:33 +0100
+
+libnet-openid-consumer-perl (0.12-1) unstable; urgency=low
+
+  * New upstream release
+  * Update Standards-Version (no changes).
+
+ -- Dominic Hargreaves <dom@earth.li>  Thu, 21 Jul 2005 21:01:00 +0100
+
+libnet-openid-consumer-perl (0.11-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 11 Jul 2005 00:27:02 +0100
