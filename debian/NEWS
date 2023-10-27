@@ -1,0 +1,11 @@
+libnet-openid-consumer-perl (1.12-1) unstable; urgency=low
+
+  This version includes API changes with respect to
+
+    $consumer->args(CODEREF)
+    $consumer->handle_server_response / user_setup_url
+
+  Please see /usr/share/doc/libnet-openid-consumer-perl/Changes.gz and
+  the Net::OpenID::Consumer manpage for details.
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 12 Nov 2011 13:15:08 +0000
